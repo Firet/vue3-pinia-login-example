@@ -1,7 +1,14 @@
 <template>
   <div class="card text-center m-3">
     <h5 class="card-header">Sucursales</h5>
-    <div class="card-body">Sucursales disponibles: {{ totalVuePackages }}</div>
+    <ul>
+      <p>Lista de sucursales disponibles :</p>
+      <li v-for="province in totalVuePackages" :key="province.id">
+        {{ province.nombre }}: Latitud: {{ province.centroide.lat }}, Longitud:
+        {{ province.centroide.lon }}
+      </li>
+
+    </ul>
   </div>
 </template>
 
