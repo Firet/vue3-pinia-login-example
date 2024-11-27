@@ -1,4 +1,5 @@
 import { Layout, List, AddEdit } from '@/views/users';
+import { Subsidiaries } from '@/views/subsidiaries';
 
 export default {
     path: '/users',
@@ -7,5 +8,7 @@ export default {
         { path: '', component: List },
         { path: 'add', component: AddEdit },
         { path: 'edit/:id', component: AddEdit }
-    ]
+    ],
+    path: '/subsidiaries',
+    component: Subsidiaries,
 };
