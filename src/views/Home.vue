@@ -47,7 +47,7 @@ const { user } = storeToRefs(authStore);
     color: white;
     font-size: 20px;
     background-color: mediumblue;
-    width: 30%;
+    width: 40%;
     height: 120px;
     margin: 0 auto;
     margin-bottom: 10px;
@@ -56,4 +56,12 @@ const { user } = storeToRefs(authStore);
 .blue-button:hover {
     background-color: hsl(0, 0%, 15%);
 }
+
+@media (max-width: 800px) {
+    .blue-button {
+        width: 55%;
+        font-size: 15px;
+    }
+}
+
 </style>
