@@ -21,7 +21,7 @@ const authStore = useAuthStore();
       <div>Proveedores</div>
       <div>Quienes Somos</div>
       <router-link to="/subsidiaries" class="link">Nuestras Sedes</router-link>
-      <button @click="authStore.logout()" class="">Logout</button>
+      <button @click="authStore.logout()" class="">Cerrar Sesión</button>
     </div>
   </nav>
 </template>

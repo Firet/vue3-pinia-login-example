@@ -7,14 +7,14 @@ import { router } from '@/router';
 
 const schema = Yup.object().shape({
     firstName: Yup.string()
-        .required('First Name is required'),
+        .required('El campo nombre es obligatorio'),
     lastName: Yup.string()
-        .required('Last Name is required'),
+        .required('El campo apellido es obligatorio'),
     username: Yup.string()
-        .required('Username is required'),
+        .required('El nombre de usuario es obligatorio'),
     password: Yup.string()
-        .required('Password is required')
-        .min(6, 'Password must be at least 6 characters')
+        .required('El campo contraseña es obligatorio')
+        .min(6, 'La contraseña tiene que tener al menos 6 caracteres')
 });
 
 async function onSubmit(values) {
@@ -23,7 +23,7 @@ async function onSubmit(values) {
     try {
         await usersStore.register(values);
         await router.push('/account/login');
-        alertStore.success('Registration successful');
+        alertStore.success('Registración exitosa');
     } catch (error) { 
         alertStore.error(error);
     }
@@ -32,35 +32,35 @@ async function onSubmit(values) {
 
 <template>
     <div class="card m-3">
-        <h4 class="card-header">Register</h4>
+        <h4 class="card-header">Registro de usuario</h4>
         <div class="card-body">
             <Form @submit="onSubmit" :validation-schema="schema" v-slot="{ errors, isSubmitting }">
                 <div class="form-group">
-                    <label>First Name</label>
+                    <label>Nombre</label>
                     <Field name="firstName" type="text" class="form-control" :class="{ 'is-invalid': errors.firstName }" />
                     <div class="invalid-feedback">{{ errors.firstName }}</div>
                 </div>
                 <div class="form-group">
-                    <label>Last Name</label>
+                    <label>Apellido</label>
                     <Field name="lastName" type="text" class="form-control" :class="{ 'is-invalid': errors.lastName }" />
                     <div class="invalid-feedback">{{ errors.lastName }}</div>
                 </div>
                 <div class="form-group">
-                    <label>Username</label>
+                    <label>Nombre de usuario</label>
                     <Field name="username" type="text" class="form-control" :class="{ 'is-invalid': errors.username }" />
                     <div class="invalid-feedback">{{ errors.username }}</div>
                 </div>
                 <div class="form-group">
-                    <label>Password</label>
+                    <label>Contraseña</label>
                     <Field name="password" type="password" class="form-control" :class="{ 'is-invalid': errors.password }" />
                     <div class="invalid-feedback">{{ errors.password }}</div>
                 </div>
                 <div class="form-group">
                     <button class="btn btn-primary" :disabled="isSubmitting">
                         <span v-show="isSubmitting" class="spinner-border spinner-border-sm mr-1"></span>
-                        Register
+                        Registrarse
                     </button>
-                    <router-link to="login" class="btn btn-link">Cancel</router-link>
+                    <router-link to="login" class="btn btn-link">Cancelar</router-link>
                 </div>
             </Form>
         </div>

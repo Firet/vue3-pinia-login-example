@@ -39,7 +39,7 @@ function fakeBackend() {
                 const { username, password } = body();
                 const user = users.find(x => x.username === username && x.password === password);
 
-                if (!user) return error('Username or password is incorrect');
+                if (!user) return error('Usuario o contraseña incorrecto');
 
                 return ok({
                     ...basicDetails(user),
@@ -51,7 +51,7 @@ function fakeBackend() {
                 const user = body();
 
                 if (users.find(x => x.username === user.username)) {
-                    return error('Username "' + user.username + '" is already taken')
+                    return error('El usuario "' + user.username + '" ya existe')
                 }
 
                 user.id = users.length ? Math.max(...users.map(x => x.id)) + 1 : 1;
@@ -85,7 +85,7 @@ function fakeBackend() {
 
                 // if username changed check if taken
                 if (params.username !== user.username && users.find(x => x.username === params.username)) {
-                    return error('Username "' + params.username + '" is already taken')
+                    return error('El usuario "' + params.username + '" ya existe')
                 }
 
                 // update and save user
@@ -110,7 +110,7 @@ function fakeBackend() {
             }
 
             function unauthorized() {
-                resolve({ status: 401, ...headers(), json: () => Promise.resolve({ message: 'Unauthorized' }) })
+                resolve({ status: 401, ...headers(), json: () => Promise.resolve({ message: 'No autorizado' }) })
             }
 
             function error(message) {
