@@ -8,7 +8,6 @@
         <!-- : Latitud: {{ province.centroide.lat }}, Longitud:
         {{ province.centroide.lon }} -->
       </div>
-
     </ul>
   </div>
 </template>
@@ -36,7 +35,11 @@ export default {
               province.nombre === "Misiones" ||
               province.nombre === "Santa Fe"
           ))
-      );
+      )
+      .catch((error) => {
+        this.errorMessage = error;
+        console.error("There was an error fetching resources/ Hubo un error consiguiendo recursos", error);
+      });
   },
 };
 </script>
