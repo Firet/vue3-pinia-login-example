@@ -1,1 +1,1 @@
-export { default as Subsidiaries } from './subsidiaries.vue';
+export { default as Subsidiaries } from './Subsidiaries.vue';
