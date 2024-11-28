@@ -3,10 +3,11 @@
     <h5 class="card-header">Sucursales</h5>
     <ul>
       <p>Lista de sucursales disponibles :</p>
-      <li v-for="province in totalVuePackages" :key="province.id">
-        {{ province.nombre }}: Latitud: {{ province.centroide.lat }}, Longitud:
-        {{ province.centroide.lon }}
-      </li>
+      <div v-for="province in filteredSubsidiaries" :key="province.id">
+        {{ province.nombre }}
+        <!-- : Latitud: {{ province.centroide.lat }}, Longitud:
+        {{ province.centroide.lon }} -->
+      </div>
 
     </ul>
   </div>
@@ -17,7 +18,7 @@ export default {
   name: "get-request",
   data() {
     return {
-      totalVuePackages: null,
+      filteredSubsidiaries: null,
     };
   },
   created() {
@@ -25,7 +26,7 @@ export default {
       .then((response) => response.json())
       .then(
         (data) =>
-          (this.totalVuePackages = data.provincias.filter(
+          (this.filteredSubsidiaries = data.provincias.filter(
             (province) =>
               province.nombre === "Neuquén" ||
               province.nombre === "Buenos Aires" ||
@@ -33,7 +34,7 @@ export default {
                 "Tierra del Fuego, Antártida e Islas del Atlántico Sur" ||
               province.nombre === "Córdoba" ||
               province.nombre === "Misiones" ||
-              province.nombre === "Santa Fé"
+              province.nombre === "Santa Fe"
           ))
       );
   },
