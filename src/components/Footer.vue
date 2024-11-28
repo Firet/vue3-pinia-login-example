@@ -3,7 +3,7 @@
     <p class="copyright">
       © {{ currentYear }} Provincia Seguros - Todos los derechos reservados
     </p>
-    <p class="legal">N de inscripción en SSN <br>
+    <p class="legal">N° de inscripción en SSN <br>
     0499
     Organismo de control<br>
     www.argentina.gob.ar/ssn<br>
@@ -24,7 +24,6 @@
 <style>
 .footer {
   border-top: 1px solid grey;
-  position: absolute;
   bottom: 0;
   width: 100%;
   font-size: 12px;
