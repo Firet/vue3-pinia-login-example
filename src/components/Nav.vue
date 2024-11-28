@@ -5,9 +5,8 @@ const authStore = useAuthStore();
 </script>
 
 <template>
-  <!-- <nav v-show="authStore.user" class="navbar navbar-expand navbar-dark bg-dark"> -->
   <nav v-show="authStore.user">
-    <div class="header navbar-nav">
+    <div class="header">
       <router-link to="/" class="link">
         <img
           class="logo"
@@ -15,12 +14,10 @@ const authStore = useAuthStore();
           alt="Provincia Seguros Logo"
         />
       </router-link>
-
-      <div class="header-item">Seguros Personas</div>
-      <div>Seguros Empresas</div>
-      <div>Proveedores</div>
-      <div>Quienes Somos</div>
-      <router-link to="/subsidiaries" class="link">Nuestras Sedes</router-link>
+      <router-link to="/" class="link">
+      <div class="header-item">Inicio</div>
+      </router-link>
+      <router-link to="/subsidiaries" class="link">Nuestras Sucursales</router-link>
       <button @click="authStore.logout()" class="">Cerrar Sesión</button>
     </div>
   </nav>
@@ -34,17 +31,20 @@ const authStore = useAuthStore();
   align-items: center;
   background-color: white;
   color: black;
-  border: solid 1px black;
+   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  margin-bottom: 5px;
   width: 100%;
   height: 100px;
 }
 
 .logo {
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
 }
 
 .link {
   color: black;
+  text-decoration: none;
 }
+
 </style>
