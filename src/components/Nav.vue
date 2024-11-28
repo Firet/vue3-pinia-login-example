@@ -15,7 +15,7 @@ const authStore = useAuthStore();
         />
       </router-link>
       <router-link to="/" class="link">
-      <div class="header-item">Inicio</div>
+        <div class="header-item">Inicio</div>
       </router-link>
       <router-link to="/subsidiaries" class="link">Nuestras Sucursales</router-link>
       <button @click="authStore.logout()" class="">Cerrar Sesión</button>
@@ -31,7 +31,7 @@ const authStore = useAuthStore();
   align-items: center;
   background-color: white;
   color: black;
-   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
   margin-bottom: 5px;
   width: 100%;
   height: 100px;
@@ -47,4 +47,16 @@ const authStore = useAuthStore();
   text-decoration: none;
 }
 
+@media (max-width: 800px) {
+  .header {
+    flex-direction: column;
+    height: 300px;
+    font-size: 15px;
+  }
+
+  .logo {
+    width: 100px;
+    height: 100px;
+  }
+}
 </style>
