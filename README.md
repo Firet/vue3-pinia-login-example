@@ -14,7 +14,7 @@ La pantalla sucursales hace una llamada a una api externa.
 - Los elementos visuales se probaron en varios navegadores.
 - Se ejecutó prettier para que el código fuera consistente en toda la aplicación.
 
-## 🏃‍♂️Cómo para ejecutar esta aplicación?
+## 🏃‍♂️ Cómo correr esta aplicación?
 
 🚀 Primero, lanza el servidor de desarrollo:
 
