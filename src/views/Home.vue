@@ -22,7 +22,6 @@ const { user } = storeToRefs(authStore);
 
 <style>
 .home-container {
-    width: 100vw;
     color: black;
 }
 
