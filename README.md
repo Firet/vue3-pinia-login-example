@@ -1,5 +1,3 @@
-Desarrollado por Damián Cardozo, mail: damianfederico@protonmail.com
-
 Podés probar esta app visitando esta página: [vue3-pinia-login-example.vercel.app](vue3-pinia-login-example.vercel.app)
 
 ## 🔵 Vue 3 + Pinia Login Example
