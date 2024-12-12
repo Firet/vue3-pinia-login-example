@@ -1,5 +1,7 @@
 Desarrollado por Damián Cardozo, mail: damianfederico@protonmail.com
 
+Podés probar esta app visitando esta página: [vue3-pinia-login-example.vercel.app](vue3-pinia-login-example.vercel.app)
+
 ## 🔵 Vue 3 + Pinia Login Example
 
 Esta app contene una página de inicio de sesión y una pantalla sucursales.
@@ -14,7 +16,7 @@ La pantalla sucursales hace una llamada a una api externa.
 - Los elementos visuales se probaron en varios navegadores.
 - Se ejecutó prettier para que el código fuera consistente en toda la aplicación.
 
-## 🏃‍♂️Cómo para ejecutar esta aplicación?
+## 🏃‍♂️ Cómo correr esta aplicación?
 
 🚀 Primero, lanza el servidor de desarrollo:
 
